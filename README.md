@@ -26,6 +26,11 @@ Com o Babel, podemos escrever código javascript utilizando todo o poder da ling
 
 `npm install --save <lib>` instala a biblioteca informada no projeto, alterando o package.json e adicionando tal dependencia
 
+### Convenções / Boas práticas
+
+1. Criação de componentes
+   Utiliza-se nomes iniciando com letra maiuscula. Ex: CommentDetail.jsx
+
 ### Projetos
 
 #### JSX
