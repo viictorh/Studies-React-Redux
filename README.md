@@ -22,6 +22,10 @@ Muitos browsers não acompanham a evolução da linguagem e o código desenvolvi
 
 Com o Babel, podemos escrever código javascript utilizando todo o poder da lingaugem e, ao "compilar" esse código é convertido para a versão ES5, podendo rodar em qualquer browser com total compatibilidade.
 
+### Comandos
+
+`npm install --save <lib>` instala a biblioteca informada no projeto, alterando o package.json e adicionando tal dependencia
+
 ### Projetos
 
 #### JSX
