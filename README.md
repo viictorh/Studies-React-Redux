@@ -31,6 +31,16 @@ Com o Babel, podemos escrever código javascript utilizando todo o poder da ling
 1. Criação de componentes
    Utiliza-se nomes iniciando com letra maiuscula. Ex: CommentDetail.jsx
 
+### Class Components
+
+**Beneficios**
+
+1. Mais facil de organizar
+2. Pode utilizar "state"
+3. Utiliza eventos do ciclo de vida do react
+4. Mais facil de tratar inputs do usuario
+5. Mais facil de realizar ações ao iniciar aplicação para o usuário
+
 ### Projetos
 
 #### JSX
@@ -39,4 +49,6 @@ Projeto inicial que mostra como criar uma simples aplicação react
 
 #### Components
 
-Projeto que visa demonstrar como utilizar a componentização no react.
+Projeto que visa demonstrar como utilizar a componentização no react e como reutiliza-los
+
+#### Seasons
