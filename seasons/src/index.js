@@ -7,12 +7,21 @@ if (module.hot) {
 }
 
 class App extends React.Component {
-  render() {
+  constructor(props) {
+    super(props);
+    //UNICO MOMENTO QUE SE FAZ A ATRIBUIÇÃO DIRETA DO VALOR NO THIS.STATE.
+    //TODOS OS OUTROS CASOS DEVEM UTILIZAR O MÉTODO setState
+    this.state = { lat: null };
     window.navigator.geolocation.getCurrentPosition(
-      (position) => console.log(position),
+      (position) => {
+        this.setState({ lat: position.coords.latitude });
+      },
       (err) => console.log(err)
     );
-    return <div>Latitude: </div>;
+  }
+
+  render() {
+    return <div>Latitude: {this.state.lat}</div>;
   }
 }
 
