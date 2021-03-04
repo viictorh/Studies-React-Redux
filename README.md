@@ -31,6 +31,26 @@ Com o Babel, podemos escrever código javascript utilizando todo o poder da ling
 1. Criação de componentes
    Utiliza-se nomes iniciando com letra maiuscula. Ex: CommentDetail.jsx
 
+### React Lifecycle
+
+![Lifecycle](/doc-images/arquitetura_do_projeto.pdf.png)
+
+1. constructor
+   Método não obrigatório em uma classe react. Caso seja criado, deve existir a chamada ao método super. É o primeiro método a ser chamado a ser criada uma classe
+   . Este é um bom local para colocar código que executará apenas uma vez ao iniciar, mas evite carregar dados neste método
+2. render
+   Método chamado apos o construtor e ao existir qualquer atualização no `state`.
+   . Evite fazer qualquer outra coisa além de retornar um código "jsx"
+3. componenetDidMount
+   Após o carregamento do componente e apresentado ao usuário, este método é chamado.
+   . Lugar ideal para carregar dados, seja de uma API externa, etc... Pode-se utilizar o construtor para isso, porém o ideal é que esse tipo de carregamento seja centralizado neste método, facilitará uma padronização utilizado pela comunidade.
+4. componentDidUpdate
+   Método chamado sempre que houve alteração no estado _logo após a chamada do método render_
+   . Ótimo lugar também para carregamento de dados quando o state ou props são modificados
+5. componentWillUnmount
+   Método chamado ao finalizar a utilização do componente e parar de mostra-lo na tela.
+   . Lugar ideal para limpar qualquer recurso que seja necessário, por exemplo um clearInterval, ou qualquer outro recurso que seja necessário indicar o fim de sua utilização
+
 ### Class Components
 
 **Beneficios**
