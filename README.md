@@ -33,6 +33,17 @@ Com o Babel, podemos escrever código javascript utilizando todo o poder da ling
 2. Ao enviar um método para um "event handler" não se utiliza parentesis, caso contrário, este método sempre será chamado ao executar o método render da classe. Ex:
    `<input onChange={this.nomeDoMetodoSemParentesis}>`
 3. O nome de **callback functions** segue a convenção onNomeElementoAcao ou handleNomeElementoAcao. Por exemplo, ao adicionar um evento de clique em um input, o nome desta função callback seria: `onInputClick()` ou `handleInputClick()`
+4. Variaveis criadas no states normalmente são iniciadas com valores default. Por exemplo:
+
+```javascript
+state = {
+  string: "",
+  array: [],
+  objeto: {},
+};
+```
+
+Isso evita a necessidade de validar o componente antes o valor antes de utilizar funções pré-definidas, como `array.map`
 
 ### React Lifecycle
 
