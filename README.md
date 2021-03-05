@@ -29,9 +29,13 @@ Com o Babel, podemos escrever código javascript utilizando todo o poder da ling
 ### Convenções / Boas práticas
 
 1. Criação de componentes
+
    Utiliza-se nomes iniciando com letra maiuscula. Ex: CommentDetail.jsx
+
 2. Ao enviar um método para um "event handler" não se utiliza parentesis, caso contrário, este método sempre será chamado ao executar o método render da classe. Ex:
+
    `<input onChange={this.nomeDoMetodoSemParentesis}>`
+
 3. O nome de **callback functions** segue a convenção onNomeElementoAcao ou handleNomeElementoAcao. Por exemplo, ao adicionar um evento de clique em um input, o nome desta função callback seria: `onInputClick()` ou `handleInputClick()`
 4. Variaveis criadas no states normalmente são iniciadas com valores default. Por exemplo:
 
@@ -45,9 +49,11 @@ state = {
 
 Isso evita a necessidade de validar o componente antes o valor antes de utilizar funções pré-definidas, como `array.map`
 
+5. Normalmente só se adiciona uma propriedade ao `state` quando existe a possibilidade dela mudar com o tempo
+
 ### React Lifecycle
 
-![Lifecycle](/doc-images/arquitetura_do_projeto.png)
+![Lifecycle](/doc-images/react-lifecycle.png)
 
 1. constructor
 
@@ -104,3 +110,5 @@ Projeto que visa demonstrar como utilizar a componentização no react e como re
 Esta aplicação visa demonstrar como utilizar as classes no react, a propriedade state e suas funções
 
 #### Pics
+
+Aplicação utilizando uma API externa para requisicoes utilizando Axios. Com essa aplicação, utilizamos tambem funções do react e criamos novas, entendendo a utilização do "this" entre outros conceitos

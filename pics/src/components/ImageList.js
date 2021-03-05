@@ -1,12 +1,13 @@
 import React from "react";
+import ImageCard from "./ImageCard";
+import "./ImageList.css";
 
 //Já descontruido o props para a propriedade images
 const ImageList = ({ images }) => {
-  //desconstruido description, id e url do parametro enviado ao map
-  const imageItems = images.map(({ description, id, urls }) => (
-    <img key={id} alt={description} src={urls.regular} />
+  const imageItems = images.map((image) => (
+    <ImageCard key={image.id} image={image} />
   ));
-  return <div>{imageItems}</div>;
+  return <div className="image-list">{imageItems}</div>;
 };
 
 export default ImageList;
