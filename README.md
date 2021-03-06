@@ -112,3 +112,7 @@ Esta aplicação visa demonstrar como utilizar as classes no react, a propriedad
 #### Pics
 
 Aplicação utilizando uma API externa para requisicoes utilizando Axios. Com essa aplicação, utilizamos tambem funções do react e criamos novas, entendendo a utilização do "this" entre outros conceitos
+
+#### Videos
+
+Aplicação para consolidar as informações ja passadas até aqui
