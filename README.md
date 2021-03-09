@@ -95,6 +95,23 @@ Isso evita a necessidade de validar o componente antes o valor antes de utilizar
 4. Mais facil de tratar inputs do usuario
 5. Mais facil de realizar ações ao iniciar aplicação para o usuário
 
+### React Hooks System
+
+React Hooks System adiciona a componentes funcionais mais funcionalidades. Permitindo, por exemplo, utilizar uma forma de "state", entre outras ações sem a necessidade de se criar uma classe. Com o hook system, busca-se desenvolver mais código reutilizavel e permitir mais customização a componentes funcionais.
+
+#### useState
+
+Se aproveitando da ideia de "array destructuring", ao utilizar o método **useState** são retornados 2 elementos num array, a variavel que seria controlada no "state" e a função responsável por atualiza-la:
+
+`const [activeIndex, setActiveIndex] = useState(null)`
+
+Ao chamar o método **useState** o valor enviado refere-se ao valor de inicialização.
+
+Ao chamar o método `setActiveIndex` todo o componente será rerenderizado, assim como acontece em uma classe ao usar `setState` que chama a função `render()`, porém, o caso do hooks, o método será inicializado, agora, com o novo valor informado ao chamar o método set, e não mais com o valor utilizado na inicialização.
+
+Abaixo um paralelo entre classes e hooks em um componente funcional
+![useState](/doc-images/hooks-usestate.png)
+
 ### Projetos
 
 #### JSX
@@ -116,3 +133,7 @@ Aplicação utilizando uma API externa para requisicoes utilizando Axios. Com es
 #### Videos
 
 Aplicação para consolidar as informações ja passadas até aqui
+
+#### Widgets
+
+Aplicação utilizando react **hooks**
