@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Search = () => {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState("corinthians");
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -19,12 +19,29 @@ const Search = () => {
       setResults(data.query.search);
     };
 
-    if (term) search();
+    if (term && !results.length) {
+      search();
+    } else {
+      const timeoutId = setTimeout(() => {
+        if (term) search();
+      }, 700);
+
+      return () => clearTimeout(timeoutId);
+    }
   }, [term]);
 
   const renderedResults = results.map((result) => {
     return (
       <div key={result.pageid} className="item">
+        <div className="right floated content">
+          <a
+            className="ui button"
+            href={`https://en.wikipedia.org?curid=${result.pageid}`}
+            target="_blank"
+          >
+            Go
+          </a>
+        </div>
         <div className="content">
           <div className="header">{result.title}</div>
           <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>

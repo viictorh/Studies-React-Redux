@@ -141,6 +141,21 @@ useEffect(() => {
 }, [conteudo]);
 ```
 
+Dentro da função useEffect é possivel ainda retornar uma função, esta função é chamada de "cleanup function". Com isso, após a primeira execução e o retorno desta função, toda vez antes de executar o useEffect é executada primeiramente esta função. Exemplo:
+
+```javascript
+//1) Array vazio.
+useEffect(() => {
+  console.log("teste 1");
+
+  return () => console.log("cleanup");
+}, []);
+```
+
+1. execução: teste 1
+2. execução: cleanup => teste 1
+   ... e assim por diante
+
 ### Projetos
 
 #### JSX
