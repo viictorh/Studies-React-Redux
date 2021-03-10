@@ -1,10 +1,14 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Search = () => {
   const [term, setTerm] = useState("");
 
   useEffect(() => {
-    console.log("oi");
+    const search = async () => {
+      await axios.get("https://");
+    };
+    search();
   }, [term]);
 
   return (
