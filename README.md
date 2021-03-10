@@ -112,6 +112,35 @@ Ao chamar o método `setActiveIndex` todo o componente será rerenderizado, assi
 Abaixo um paralelo entre classes e hooks em um componente funcional
 ![useState](/doc-images/hooks-usestate.png)
 
+#### useEffect
+
+Permite que componentes funcionais utilizem funções semelhantes aos metodos de ciclo de vida de classe.
+
+Este hook pode ser utilizado para executar uma função nos seguintes casos:
+
+1. Quando um componente é renderizado pela **primeira vez (somente)**
+2. Quando o componente é renderizado pela **primeira vez e sempre que é rerenderizado**
+3. Quando o componente é renderizado pela **primeira vez _E_ sempre que é renderizado _E_ alguma informação foi atualizada**
+
+O primeiro argumento desta função é a função que será executada de acordo com um dos 3 casos acima que escolhermos. Já o segundo parametro é para decidir qual será o caso:
+
+```javascript
+//1) Array vazio.
+useEffect(() => {
+  console.log("");
+}, []);
+
+//2) Sem o segundo parametro
+useEffect(() => {
+  console.log("");
+});
+
+//3) Array com um ou mais elementos
+useEffect(() => {
+  console.log("");
+}, [conteudo]);
+```
+
 ### Projetos
 
 #### JSX
