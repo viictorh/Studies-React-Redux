@@ -158,6 +158,13 @@ useEffect(() => {
 
 #### useRef
 
+Cria uma referencia ao elemento associado. No exemplo abaixo a variavel ref passa a ter uma referencia à div a qual a referencia foi associada
+
+```javascript
+const ref = useRef();
+<div ref={ref}></div>;
+```
+
 ### Projetos
 
 #### JSX
