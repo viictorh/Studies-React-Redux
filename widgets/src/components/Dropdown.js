@@ -8,7 +8,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   useEffect(() => {
     const onBodyClick = (e) => {
       //verifica se o elemento clicado está dentro da div do dropdown, ou seja, a referencia obtida pelo hook
-      if (ref.current.contains(e.target)) {
+      if (ref.current && ref.current.contains(e.target)) {
         return;
       }
       //caso o click nao tenha ocorrido dentro da div pai do dropdown, entao executa a função
