@@ -165,6 +165,25 @@ const ref = useRef();
 <div ref={ref}></div>;
 ```
 
+#### Custom Hooks
+
+Permite criar funções que facilitam a reutilização de código em outros locais. Desta forma, caso algum outro componente precise utilizar algo simular, basta utilizar esse hook customizado.
+
+- É a melhor forma de se criar código reutilizavel em um projeto react (além de criar componentes)
+- É criado extraindo código relacionado entre si em um componente funcional
+- Custom Hooks sempre utiliza ao menos 1 hook "primitivo" (useState, useEffect, etc) internamente
+- Cada custom hook deve ter apenas uma proposta, ou seja, servir para algo bem definido (validar formularios, realizar requests, etc )
+- Por convenção, utiliza-se o nome `useAlgumaCoisa`
+
+**Processo para criar um hook reutilizavel**
+
+1. Identificar cada linha de código relacionada a uma proposta especifica no código
+2. Identificar os "inputs" no código. Ou seja, as informações que são enviadas para as funções
+3. Identificar o que as funções retornam (outputs) como resposta
+4. Extrair todo esse código recebendo os inputs e retornando os outputs
+
+Exemplo de custom hook usado para validação de formulários: https://www.youtube.com/watch?v=KGFG-yQD7Dw
+
 ### Projetos
 
 #### JSX
@@ -186,6 +205,10 @@ Aplicação utilizando uma API externa para requisicoes utilizando Axios. Com es
 #### Videos
 
 Aplicação para consolidar as informações ja passadas até aqui
+
+#### Videos-Hooks
+
+Aplicação igual a anterior, de videos, mas refatorando utilizando apenas react hooks
 
 #### Widgets
 
