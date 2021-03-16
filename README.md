@@ -63,6 +63,17 @@ array.push["novoitem"];
 [...array, "novoitem"];
 ```
 
+7. Ao criar **redux-actions** e **redux-reducers**, normalmente utiliza-se o padrão de pasta _actions_ e _reducers_ apenas com o arquivo index.js dentro. Desta forma, ao importar um dos itens, o webpack automaticamente, quando não utilizado o nome completo na importação, já procura pelo arquivo index.js
+
+Por exemplo, supondo que exista o arquivo _actions/index.js_ podemos realizar a importação de duas maneiras:
+
+```javascript
+//primeira forma
+import actions from "./actions/index.js";
+//segunda forma
+import actions from "./actions";
+```
+
 ### React Lifecycle
 
 ![Lifecycle](/doc-images/react-lifecycle.png)
