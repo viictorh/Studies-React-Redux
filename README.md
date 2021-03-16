@@ -51,6 +51,18 @@ Isso evita a necessidade de validar o componente antes o valor antes de utilizar
 
 5. Normalmente só se adiciona uma propriedade ao `state` quando existe a possibilidade dela mudar com o tempo
 
+6. Nunca altere estrutura de dados em um reducers (redux).
+
+Ex:
+
+```javascript
+//em vez de
+array.push["novoitem"];
+
+//faça uma copia primeiro (novo array) e adicione o novo item
+[...array, "novoitem"];
+```
+
 ### React Lifecycle
 
 ![Lifecycle](/doc-images/react-lifecycle.png)
@@ -183,6 +195,30 @@ Permite criar funções que facilitam a reutilização de código em outros loca
 4. Extrair todo esse código recebendo os inputs e retornando os outputs
 
 Exemplo de custom hook usado para validação de formulários: https://www.youtube.com/watch?v=KGFG-yQD7Dw
+
+### Redux
+
+#### Redux Cycle
+
+1. Action Creator
+
+É o responsável por iniciar a ação, ou seja, a função responsável por criar ou retornar um objeto javascript (**action**)
+
+2. Action
+
+Ação que será realizada. A inteção do que se está propondo. É o objeto criado pelo **Action Creator**. Ele contem a propriedade type (mudanças que queremos fazer), e o payload (contexto a respeito do que queremos mudar).
+
+3. dispatch
+
+Local centralizador que dispara a ação para todos os **Reducers**. Será responsável por criar copias da **Action** recebida e enviar para outros locais no sistema para trata-la.
+
+4. Reducers
+
+Departamentos responsável por tratar as ações. Caso a ação não seja relacionada a este departamento, ela é simplesmente ignorada. Sendo assim, é uma função responsável por receber uma ação, processa-la alterando o objeto e retornando-o para que seja controlado em um lugar centralizado.
+
+5. State
+
+Local responsável por "armazenar" os dados de forma centralizada. Onde todos os **Reducers** podem acessar. Após os reducers processarem os dados, todas as informações são centralizadas nesse local.
 
 ### Projetos
 
