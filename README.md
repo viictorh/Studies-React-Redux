@@ -249,3 +249,7 @@ Aplicação igual a anterior, de videos, mas refatorando utilizando apenas react
 #### Widgets
 
 Aplicação utilizando react **hooks**
+
+#### Redux-Songs
+
+Aplicação com uma utilização simples de **Redux**
