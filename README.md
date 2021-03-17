@@ -217,7 +217,7 @@ Exemplo de custom hook usado para validação de formulários: https://www.youtu
 
 2. Action
 
-Ação que será realizada. A inteção do que se está propondo. É o objeto criado pelo **Action Creator**. Ele contem a propriedade type (mudanças que queremos fazer), e o payload (contexto a respeito do que queremos mudar).
+Ação que será realizada. A inteção do que se está propondo. É o objeto criado pelo **Action Creator**. Ele contem a propriedade type (mudanças que queremos faze - **obrigatório**), e o payload (contexto a respeito do que queremos mudar - **opcional**).
 
 3. dispatch
 
@@ -226,10 +226,30 @@ Local centralizador que dispara a ação para todos os **Reducers**. Será respo
 4. Reducers
 
 Departamentos responsável por tratar as ações. Caso a ação não seja relacionada a este departamento, ela é simplesmente ignorada. Sendo assim, é uma função responsável por receber uma ação, processa-la alterando o objeto e retornando-o para que seja controlado em um lugar centralizado.
+Todos os reducers são chamados ao iniciar a aplicação informando o valor inicial de `undefined`
+
+**Regras**
+
+- Deve sempre retornar um valor diferente de `undefined`
+- Deve retornar o state apenas usando o valor anterior e o action.
+- Não deve sair do reducer, por exemplo, chamar uma API, ler um arquivo, acessar o DOM, enfim, fazer ações além de utilizar o **state** e **action** informado para retornar o proximo valor do **state**. Deve-se manter um reducers "puro".
+- Não se deve modificar a própria instancia do **state**. Deve-se retornar um novo objeto/valor.
+  ![Redux atualizando state](/doc-images/redux-update-state.png)
 
 5. State
 
 Local responsável por "armazenar" os dados de forma centralizada. Onde todos os **Reducers** podem acessar. Após os reducers processarem os dados, todas as informações são centralizadas nesse local.
+
+#### Redux Thunk
+
+Ao utilizar chamadas assincronas com Redux, deve-se utilizar um middleware, pois ActionsCreators devem sempre retornar como resposta um objeto simples, ou seja, um "JSON" com type e payload (opcional).
+Quando realizamos uma chamada assincrona, acabamos retornando uma função assincrona como resposta e o reducers não saberá tratar este tipo de retorno, sendo assim, o redux já informa o erro e que devemos utilizar um middleware.
+
+Abaixo um exemplo de como funciona uma chamada a APIs com redux
+![Redux api calls](/doc-images/redux-api-calls.png)
+
+Abaixo um fluxo de como o Redux-Thunk trata as funções até que o retorno seja um objeto e seja enviado para o reducers.
+![Fluxo Redux thunk](/doc-images/fluxo-redux-thunk.png)
 
 ### Projetos
 
