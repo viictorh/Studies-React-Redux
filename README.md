@@ -264,3 +264,7 @@ Aplicação utilizando react **hooks**
 #### Redux-Songs
 
 Aplicação com uma utilização simples de **Redux**
+
+#### Redux-Async-Blog
+
+Projeto utilizado para continuar a aprendizagem utilizando redux. Agora, utilizando APIs externas e requisições assincronas com axios. Além disso, utiliza-se também a biblioteca redux-thunk
