@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { selectSong } from "../actions";
 
 class SongList extends Component {
-  state = {};
-
   renderList() {
     return this.props.songs.map((song) => (
       <div key={song.title} className="item">
