@@ -74,6 +74,8 @@ import actions from "./actions/index.js";
 import actions from "./actions";
 ```
 
+8. Não utilizar `<a href=''>` com react-router. Não é a maneira correta de se realizar a navegação com esta biblioteca. Caso seja feito desse jeito, todos os estados que foram carregados serão perdidos e novas requisicoes são feitas ao servidor
+
 ### React Lifecycle
 
 ![Lifecycle](/doc-images/react-lifecycle.png)
@@ -289,3 +291,10 @@ Aplicação com uma utilização simples de **Redux**
 #### Redux-Async-Blog
 
 Projeto utilizado para continuar a aprendizagem utilizando redux. Agora, utilizando APIs externas e requisições assincronas com axios. Além disso, utiliza-se também a biblioteca redux-thunk como middleware
+
+#### Stream
+
+Projeto que terá como base a ideia da Twitch. Nele será implemetada a ideia de stream de video, login, logout utilizando google, react-router, **CRUD** com redux, que é a ideia principal deste projeto
+
+- **client**
+  Este projeto é responsável pelo front-end da aplicação
