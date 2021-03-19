@@ -249,6 +249,7 @@ Abaixo um exemplo de como funciona uma chamada a APIs com redux
 ![Redux api calls](/doc-images/redux-api-calls.png)
 
 Abaixo um fluxo de como o Redux-Thunk trata as funções até que o retorno seja um objeto e seja enviado para o reducers.
+
 ![Fluxo Redux thunk](/doc-images/fluxo-redux-thunk.png)
 
 ### Projetos
@@ -287,4 +288,4 @@ Aplicação com uma utilização simples de **Redux**
 
 #### Redux-Async-Blog
 
-Projeto utilizado para continuar a aprendizagem utilizando redux. Agora, utilizando APIs externas e requisições assincronas com axios. Além disso, utiliza-se também a biblioteca redux-thunk
+Projeto utilizado para continuar a aprendizagem utilizando redux. Agora, utilizando APIs externas e requisições assincronas com axios. Além disso, utiliza-se também a biblioteca redux-thunk como middleware

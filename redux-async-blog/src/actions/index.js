@@ -6,7 +6,7 @@ export const fetchPosts = () => async (dispatch /*, getState*/) => {
   dispatch({ type: "FETCH_POSTS", payload: response.data });
 };
 
-//NORMAL UTILIZAR. MESMO COM REACT THUNK, PODE-SE UTILIZAR OBJETOS NORMAIS COMO RETORNO
-export const selectPost = () => {
-  return { type: "SELECT_POST" };
+export const fetchUser = (id) => async (dispatch) => {
+  const response = await jsonPlaceholder.get(`users/${id}`);
+  dispatch({ type: "FETCH_USER", payload: response.data });
 };
