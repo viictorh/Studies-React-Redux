@@ -76,6 +76,10 @@ import actions from "./actions";
 
 8. Não utilizar `<a href=''>` com react-router. Não é a maneira correta de se realizar a navegação com esta biblioteca. Caso seja feito desse jeito, todos os estados que foram carregados serão perdidos e novas requisicoes são feitas ao servidor
 
+9. Métodos, rotas e ações em APIs RESTful
+
+![Lifecycle](/doc-images/rest_ful_conventions.png)
+
 ### React Lifecycle
 
 ![Lifecycle](/doc-images/react-lifecycle.png)
@@ -298,3 +302,6 @@ Projeto que terá como base a ideia da Twitch. Nele será implemetada a ideia de
 
 - **client**
   Este projeto é responsável pelo front-end da aplicação
+
+- **api**
+  Este projeto utiliza a biblioteca json-server (mesma biblioteca utilizada na API https://jsonplaceholder.typicode.com). Ela executará na porta 3001 e para utiliza-la basta criar um arquivo db.json e configurar o arquivo packge.json para iniciar o servidor.

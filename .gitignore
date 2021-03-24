@@ -24,3 +24,4 @@ yarn-error.log*
 
 /jsx-0/node_modules/*
 */node_modules/*
+/stream/api/node_modules/*
