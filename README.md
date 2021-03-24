@@ -294,7 +294,7 @@ Projeto utilizado para continuar a aprendizagem utilizando redux. Agora, utiliza
 
 #### Stream
 
-Projeto que terá como base a ideia da Twitch. Nele será implemetada a ideia de stream de video, login, logout utilizando google, react-router, **CRUD** com redux, que é a ideia principal deste projeto
+Projeto que terá como base a ideia da Twitch. Nele será implemetada a ideia de stream de video, login, logout utilizando google, react-router, **CRUD** com redux e redux-form, que é a ideia principal deste projeto
 
 - **client**
   Este projeto é responsável pelo front-end da aplicação
