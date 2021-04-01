@@ -305,3 +305,7 @@ Projeto que terá como base a ideia da Twitch. Nele será implemetada a ideia de
 
 - **api**
   Este projeto utiliza a biblioteca json-server (mesma biblioteca utilizada na API https://jsonplaceholder.typicode.com). Ela executará na porta 3001 e para utiliza-la basta criar um arquivo db.json e configurar o arquivo packge.json para iniciar o servidor.
+
+#### Translate
+
+Projeto utilizado para aprendizado da nova feature (react >16) **React Context**. Com ela, é possivel passar propriedades para os componentes filhos sem precisar passar por intermediarios, ou seja, qualquer filho, independentemente da posição na arvore do react, pode acessar a propriedade sem a necessidade de passar por todos os filhos de um determinado componente até chegar ao destino.
