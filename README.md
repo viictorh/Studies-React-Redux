@@ -277,6 +277,29 @@ _Context_
 
 - Distribui data em varios componentes
 
+**Se quisermos utilizar Context em vez de Redux**
+
+- Precisamos conseguir obter os dados em qualquer componente na nossa hierarquia
+- É preciso conseguir separar a logica de negocio e lógica de visualização
+- Separando a logica de negocio, deve ser possivel quebrar a logica de negocio em diversos arquivos, não criar um unico arquivo de 1000 linhas de codigo com toda a logica nele.
+
+Uma forma de resolver esses itens, é criando uma forma de "store" que centralizará o context, se tornando a unica forma de obtenção de informação a qual os outros componentes tenham interesse:
+
+![Context X Redux](/doc-images/context_x_redux.png)
+
+**Motivos para utilizar Redux ou Context**
+
+_Redux_
+
+- Excelente documentação
+- Design patterns bem conhecidos e estruturados
+- Grande quantidade de bibliotecas Open-Source que podem ser utilizadas em conjunto
+
+_Context_
+
+- Não é necessario adicionar uma nova biblioteca para utiliza-lo
+- Desafio: Dificil de construir "store" componentes e compartilhar dados entre elas
+
 ### Projetos
 
 #### JSX
