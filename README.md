@@ -258,6 +258,25 @@ Abaixo um fluxo de como o Redux-Thunk trata as funções até que o retorno seja
 
 ![Fluxo Redux thunk](/doc-images/fluxo-redux-thunk.png)
 
+#### Context
+
+Context é uma API do react que permite passar informação para de componentes no top de uma estrutura para outros componentes abaixo sem a necessidade de passar via props por cada componente.
+Por exemplo, o componente APP tem a propriedade "Theme". Nessa estrutura, existe os componentes conforme a seguir:
+APP => Content => Card => Button.
+Sem utilizar context, para que a propriedade "theme" chegue ao componente Button, deve-se passar como props por todos os componentes pai. Já utilizando o context, é possivel que o Button utilize esta propriedade sem a necessidade de enviar a propriedade para cada componente.
+
+**Diferença entre Redux e Context**
+
+_Redux_
+
+- Distribui data em varios componentes
+- Centraliza os dados em um unico local (store)
+- Prove mecanismo para modificar os dados no store
+
+_Context_
+
+- Distribui data em varios componentes
+
 ### Projetos
 
 #### JSX
